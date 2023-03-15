@@ -11,76 +11,104 @@ int main()
     int countStorage[] = {0};
     counter = 0;
     int input;
+    int startScript;
+
+    // ввожу заход
+    // идея отпала, так как на текущий момент невозможен вывод на русском языке
 
     printf("Welcome to counter of conversion calling\n");
-    printf("Choose a result of call\n");
-    printf("1: successful call\n");
-    printf("2: failed call\n");
-    printf("3: call a document\n");
-    printf("4: call end of agreement\n");
-    printf("5: other end of call\n");
-    printf("6: call back\n");
-
+    printf("Menu:\n1: Start of service\n");
+    getchar();
     // Инпут вводит число и проверяет на условие, 0 это выход из программы
-    while ((input = getchar()) != EOF)
+    if (1)
     {
-        
-        if (input == '1')
+        while ((input = getchar()) != EOF)
         {
-            printf("Successful call added\n");
+            // Задача 1: сделать заполнение массива данными
+            // Задача 2: сделать вывод массива с подсчетом в соответствии с результатом звонка
+            printf("Choose a result of call\n");
+            // printf("------------\n");
+            printf("1: successful call\n");
+            printf("2: failed call\n");
+            printf("3: call a document\n");
+            printf("4: call end of agreement\n");
+            printf("5: other end of call\n");
+            printf("6: call back\n");
+            printf("0: for finish\n");
             ++counter;
-            continue;
-        }
+            if (counter <= '6')
+            {
+                ++countStorage[counter];
+            }
+            
+            // if (input == '1' && input != ' ' && input != '\n')
+            // {
+            //     printf("------------\n");
+            //     printf("Successful call added\n");
+            //     printf("------------\n");
+            //     ++counter;
+            //     continue;
+            // }
 
-        if (input == '2')
-        {
-            printf("Failed call added\n");
-            ++counter;
-            continue;
-        }
+            // if (input == '2' && input != ' ' && input != '\n')
+            // {
+            //     printf("------------\n");
+            //     printf("Failed call added\n");
+            //     printf("------------\n");
+            //     ++counter;
+            //     continue;
+            // }
 
-        if (input == '3')
-        {
-            printf("Call a document added\n");
-            ++counter;
-            continue;
-        }
+            // if (input == '3' && input != ' ' && input != '\n')
+            // {
+            //     printf("------------\n");
+            //     printf("Call a document added\n");
+            //     printf("------------\n");
+            //     ++counter;
+            //     continue;
+            // }
 
-        if (input == '4')
-        {
-            printf("Agreement call added\n");
-            ++counter;
-            continue;
-        }
+            // if (input == '4' && input != ' ' && input != '\n')
+            // {
+            //     printf("------------\n");
+            //     printf("Agreement call added\n");
+            //     printf("------------\n");
+            //     ++counter;
+            //     continue;
+            // }
 
-        if (input == '5')
-        {
-            printf("Other call added\n");
-            ++counter;
-            continue;
-        }
+            // if (input == '5' && input != ' ' && input != '\n')
+            // {
+            //     printf("------------\n");
+            //     printf("Other call added\n");
+            //     printf("------------\n");
+            //     ++counter;
+            //     continue;
+            // }
 
-        if (input == '6')
-        {
-            printf("Call back added\n");
-            ++counter;
-            continue;
-            printf("6 пункт %d\n", counter);
-        }
-        else if (input >= '7')
-        {
-            printf("Digit more than need\nTry again\n");
-        }
-        
+            // if (input == '6' && input != ' ' && input != '\n')
+            // {
+            //     printf("------------\n");
+            //     printf("Call back added\n");
+            //     printf("------------\n");
+            //     ++counter;
+            //     continue;
+            // }
+            // else if (input >= '7')
+            // {
+            //     printf("------------\n");
+            //     printf("Digit more than need\nTry again\n");
+            //     printf("------------\n");
+            // }
 
-        else if(input == 0)
-        {
-            // вывод данных лучше сделать через цикл. Я делал такое в гистограмме
-            printf("End");
-            break;
+            else if (input == '0')
+            {
+                // вывод данных лучше сделать через цикл. Я делал такое в гистограмме
+                printf("------------\n");
+                printf("End\n");
+                printf("Total calling %d\n", countStorage[counter]);
+                break;
+            }
         }
-        
     }
-    printf("End\n");
-    printf("Total count %d", counter);
 }
